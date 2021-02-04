@@ -1,0 +1,141 @@
+$font-family:   "Roboto";
+$font-size:     10px;
+
+$color-primary: #ABA194;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-family;
+    font-size: 10px;
+    background-size: 200% 100% !important;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+    background: linear-gradient(45deg, #05C6FF 10%, #38ea32 90%);
+    height: 100vh
+}
+
+.login_div {
+    width: 90%;
+    max-width: 340px;
+    margin: 10vh auto;
+}
+
+.login__header {
+    
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.7s forwards;
+}
+
+
+.h1_title {
+    font-size: 50px;
+    margin-bottom: -10px;
+    font-weight: 500;
+    color: white;
+}
+
+
+.h1_title:hover{
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+
+
+.form1 {
+    margin-top: 40px;
+    border-radius: 7px;
+    overflow: hidden;
+    opacity: 100;
+   
+}
+
+
+
+.f_input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-family: $font-family;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    transition: 0.3s;
+    
+    &:focus {
+        background: darken(#fff, 3%);
+    }
+}
+
+.login_btn,.register_btn{
+float:left;
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+    font-family: $font-family;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 0;
+    color: grey; 
+    background: $color-primary;
+    transition: 0.3s;
+    cursor: pointer;
+    
+    &:hover {
+        background: darken($color-primary, 20%);
+    }
+}
+
+
+/*.btn_group button{
+    display:inline-block;
+    width: 50%;
+    cursor: pointer;
+    float: left;
+}
+*/
+
+button:hover{
+    color: red;
+    background-color: greenyellow;
+}
+
+.foot{
+  
+    display: inline-block;
+    font-size: 15px;
+    color: royalblue;
+    overflow: hidden;
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+
+
+}
+
+.foot:hover{
+    background-position: 0 100%;
+    color: red
+}
+
